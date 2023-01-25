@@ -171,9 +171,22 @@ body[dir="rtl"] .book-menu {
   margin-bottom: $padding-16 * 3;
 }
 
-.book-header {
+.mobile-header {
   display: none;
   margin-bottom: $padding-16;
+
+  label {
+    line-height: 0;
+  }
+
+  img.book-icon {
+    height: 1.5em;
+    width: 1.5em;
+  }
+}
+
+.book-header {
+  display: block;
 
   label {
     line-height: 0;
@@ -304,7 +317,12 @@ body[dir="rtl"] .book-menu {
     display: none;
   }
 
-  .book-header {
+  .title {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .mobile-header {
     display: block;
   }
 
