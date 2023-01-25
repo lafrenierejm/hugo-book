@@ -1,13 +1,17 @@
 <div class="flex align-center justify-between">
-  <label for="menu-control">
-    <img src="{{ "svg/menu.svg" | relURL }}" class="book-icon" alt="Menu" />
-  </label>
+  <div class="mobile-header">
+    <label for="menu-control">
+      <img src="{{ "svg/menu.svg" | relURL }}" class="book-icon" alt="Menu" />
+    </label>
+  </div>
 
-  <h3>{{ partial "docs/title" . }}</h3>
+  <h1 class="title">{{ partial "docs/title" . }}</h1>
 
-  <label for="toc-control">
-    {{ if default true (default .Site.Params.BookToC .Params.BookToC) }}
-    <img src="{{ "svg/toc.svg" | relURL }}" class="book-icon" alt="Table of Contents" />
-    {{ end }}
-  </label>
+  <div class="mobile-header">
+    <label for="toc-control">
+      {{ if default true (default .Site.Params.BookToC .Params.BookToC) }}
+      <img src="{{ "svg/toc.svg" | relURL }}" class="book-icon" alt="Table of Contents" />
+      {{ end }}
+    </label>
+  </div>
 </div>

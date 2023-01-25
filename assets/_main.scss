@@ -187,7 +187,7 @@ body[dir="rtl"] .book-menu {
   }
 }
 
-.book-header {
+.mobile-header {
   display: none;
   margin-bottom: $padding-16;
 
@@ -199,6 +199,19 @@ body[dir="rtl"] .book-menu {
     overflow: hidden;
     text-overflow: ellipsis;
     margin: 0 $padding-16;
+  }
+
+  img.book-icon {
+    height: 1.5em;
+    width: 1.5em;
+  }
+}
+
+.book-header {
+  display: block;
+
+  label {
+    line-height: 0;
   }
 
   img.book-icon {
@@ -313,7 +326,12 @@ body[dir="rtl"] .book-menu {
     display: none;
   }
 
-  .book-header {
+  .title {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .mobile-header {
     display: block;
   }
 
