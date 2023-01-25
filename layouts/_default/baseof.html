@@ -19,6 +19,7 @@
         {{ template "header" . }} <!-- Mobile layout header -->
       </header>
 
+      {{ template "dates" . }}
       {{ partial "docs/inject/content-before" . }}
       {{ template "main" . }} <!-- Page Content -->
       {{ partial "docs/inject/content-after" . }}
@@ -58,6 +59,10 @@
     {{ template "toc" . }}
   </aside>
   {{ end }}
+{{ end }}
+
+{{ define "dates" }}
+  {{ partial "docs/dates" . }}
 {{ end }}
 
 {{ define "footer" }}
