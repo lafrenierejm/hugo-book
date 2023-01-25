@@ -220,6 +220,11 @@ body[dir="rtl"] .book-menu {
   }
 }
 
+.dates {
+  display: block;
+  margin-bottom: 2ex;
+}
+
 .book-search {
   position: relative;
   margin: $padding-16 0;
