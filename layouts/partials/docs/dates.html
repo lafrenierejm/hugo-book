@@ -1,12 +1,12 @@
 <div class="dates">
   {{- $datePublished := partial "docs/date" (dict "Date" .Date "Format" .Site.Params.BookDateFormat) -}}
-  <p>Originally published {{ $datePublished }}
-
 
 {{ if and .GitInfo .Site.Params.BookRepo }}
     {{- $dateModified := partial "docs/date" (dict "Date" .GitInfo.AuthorDate.Local "Format" .Site.Params.BookDateFormat) -}}
     {{- $commitPath := default "commit" .Site.Params.BookCommitPath -}}
-  <p>Last modified <a href="{{ .Site.Params.BookRepo }}/{{ $commitPath }}/{{ .GitInfo.Hash }}" title='{{ i18n "Last modified by" }} {{ .GitInfo.AuthorName }} | {{ $dateModified }}' target="_blank" rel="noopener"> {{ $dateModified }}</a>
+  <p>This page was originally published {{ $datePublished }} and last modified <a href="{{ .Site.Params.BookRepo }}/{{ $commitPath }}/{{ .GitInfo.Hash }}" title='{{ i18n "Last modified by" }} {{ .GitInfo.AuthorName }} | {{ $dateModified }}' target="_blank" rel="noopener"> {{ $dateModified }}</a>.
+{{ else }}
+  <p>This page was originally published {{ $datePublished }}.
 {{ end }}
 
 </div>
