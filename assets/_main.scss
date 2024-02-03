@@ -21,14 +21,6 @@ body {
   }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-weight: $body-font-weight;
-}
-
 a {
   text-decoration: none;
   color: var(--color-link);
@@ -112,6 +104,10 @@ a .book-icon {
     background: var(--body-background);
 
     @include fixed;
+  }
+
+  h2 {
+    font-weight: normal;
   }
 
   a,
