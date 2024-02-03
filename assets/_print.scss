@@ -1,7 +1,8 @@
 @media print {
   .book-menu,
   .book-footer,
-  .book-toc {
+  .book-toc,
+  #TableOfContents {
     display: none;
   }
 
