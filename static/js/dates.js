@@ -47,7 +47,7 @@ for (let element of document.getElementsByClassName("date")) {
   if (element.innerText == "Present") {
     date = today;
   } else {
-    date = new Date(Date.UTC(...element.innerText.split("-")));
+    date = new Date(Date.parse(element.innerText))
   }
 
   if (element.classList.contains("date-precise")) {
