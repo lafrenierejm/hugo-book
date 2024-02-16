@@ -48,13 +48,12 @@ for (let element of document.getElementsByClassName("date")) {
     date = today;
   } else {
     date = new Date(Date.parse(element.innerText))
+    if (element.classList.contains("date-precise")) {
+      dateOptions.day = "numeric";
+    }
+    element.innerText = date.toLocaleDateString(undefined, dateOptions);
   }
 
-  if (element.classList.contains("date-precise")) {
-    dateOptions.day = "numeric";
-  }
-
-  element.innerText = date.toLocaleDateString(undefined, dateOptions);
   tenureDates[element.id] = date;
 }
 
