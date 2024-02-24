@@ -210,17 +210,19 @@
   }
 }
 
-.box {
-  outline-width: 0.1em;
-  border: 1px solid var(--gray-200);
-  border-radius: 0.25rem;
-  padding-top: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-bottom: 1rem;
-  margin-bottom: 1rem;
+@media screen {
+  .box {
+    outline-width: 0.1em;
+    border: 1px solid var(--gray-200);
+    border-radius: 0.25rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
 
-  h2,h3 {
-    margin-top: 0;
+    h2,h3 {
+      margin-top: 0;
+    }
   }
 }
