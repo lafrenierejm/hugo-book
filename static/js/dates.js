@@ -12,9 +12,9 @@ function dateDiff(start, end) {
   const utcEnd = Date.UTC(end.getFullYear(), end.getMonth(), end.getDate());
 
   var days = Math.floor((utcEnd - utcStart) / _MS_PER_DAY);
-  const years = 365 < days ? Math.floor(days / 365) : 0;
+  const years = Math.floor(days / 365);
   days -= years * 365;
-  const months = 30 < days ? Math.floor(days / 30) : 0;
+  const months = Math.floor(days / 30);
 
   var units = [];
   if (years == 1) {
