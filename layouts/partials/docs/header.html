@@ -5,7 +5,12 @@
     </label>
   </div>
 
+  {{ if .Params.printTitle }}
+  <h1 class="title screen-only">{{ partial "docs/title" . }}</h1>
+  <h1 class="title print-only">{{ .Params.printTitle }}</h1>
+  {{ else }}
   <h1 class="title">{{ partial "docs/title" . }}</h1>
+  {{ end }}
 
   <div class="mobile-header">
     <label for="toc-control">
