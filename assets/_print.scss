@@ -1,11 +1,17 @@
+.print-only {
+  display: none;
+}
+
 @media print {
   .book-menu,
   .book-footer,
   .book-toc,
+  .screen-only,
   #TableOfContents {
     display: none;
   }
 
+  .print-only,
   .book-header,
   .book-header aside {
     display: block;
