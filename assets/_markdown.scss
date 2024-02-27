@@ -8,6 +8,11 @@
     }
   }
 
+  .box {
+    ul, ol {
+      padding-inline-start: $padding-16;
+    }
+  }
 
   // remove padding at the beginning of page
   > :first-child {
