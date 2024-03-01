@@ -1,19 +1,6 @@
 @import "variables";
 
 .markdown {
-  ul, ol {
-    margin-top: 0.5ex;
-    li {
-      margin-bottom: 0.5ex;
-    }
-  }
-
-  .box {
-    ul, ol {
-      padding-inline-start: $padding-16;
-    }
-  }
-
   // remove padding at the beginning of page
   > :first-child {
     margin-top: 0;
@@ -145,10 +132,14 @@
     background: var(--gray-200);
   }
 
-  ul,
-  ol {
+  ol,
+  ul {
+    margin-top: 0.5ex;
     padding-inline-start: $padding-16 * 2;
     word-wrap: break-word;
+    li {
+      margin-bottom: 0.5ex;
+    }
   }
 
   dl {
@@ -160,6 +151,13 @@
     dd {
       margin-inline-start: 0;
       margin-bottom: $padding-16;
+    }
+  }
+
+  .box {
+    ol,
+    ul {
+      padding-inline-start: $padding-16;
     }
   }
 
