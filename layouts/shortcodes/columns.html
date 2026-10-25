@@ -1,5 +1,6 @@
 {{- $ratio := (split (.Get "ratio") ":") -}}
-<div class="book-columns flex flex-wrap{{ with .Get "class" }} {{ . }}{{ end }}">
+{{- $rightLast := .Get "rightLast" -}}
+<div class="book-columns flex flex-wrap{{ with .Get "class" }} {{ . }}{{ end }}{{ if $rightLast }} book-columns-right-last{{ end }}">
 {{ range $index, $content := split .InnerDeindent "<--->" }}
   {{- $grow := default 1 (index $ratio $index) -}}
   <div class="flex-even markdown-inner" style="flex-grow: {{ $grow }};">

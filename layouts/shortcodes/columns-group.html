@@ -1,0 +1,4 @@
+{{- $cols := default "1fr auto" (.Get "cols") -}}
+<div class="book-columns-group{{ with .Get "class" }} {{ . }}{{ end }}" style="grid-template-columns: {{ $cols }};">
+{{ .Inner | safeHTML }}
+</div>
